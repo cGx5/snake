@@ -84,7 +84,7 @@ void destroy_snake(snake_t *snake);
 void randomly_add_food(board_t *board, float probability);
 
 /* set direction */
-void set_direction(snake_t *snake);
+void set_direction(snake_t *snake, direction_t d);
 
 void update_snake_head(snake_t *snake, board_t *board, int growth_per_food);
 void update_snake_tail(snake_t *snake, board_t *board);
