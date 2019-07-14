@@ -63,12 +63,20 @@ typedef struct Game {
 
 /* create a board with `rows` * `cols` */
 board_t *create_board(int rows, int cols);
-void destroy_board(board_t **board);
+
+/* free a board */
+void destroy_board(board_t *board);
+
+/* get cell in specific position */
 cell_t *board_cell(board_t *board, int row, int col);
 
+/* create a snake */
 snake_t *create_snake(board_t *board, int row, int col, direction_t heading);
-void destroy_snake(snake_t **snake);
 
+/* free a snake */
+void destroy_snake(snake_t *snake);
+
+/* add food to board with probalility */
 void randomly_add_food(board_t *board, float probability);
 
 #endif // GAME_H
