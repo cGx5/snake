@@ -12,6 +12,7 @@ void test_create_board() {
   assert(board_cell(board, 0, 5) == NULL);
   assert(board_cell(board, 5, 5) == NULL);
   assert(board_cell(board, 4, 4) != NULL);
+  destroy_board(board);
 }
 
 int main(int argc, char** argv) {

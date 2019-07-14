@@ -35,6 +35,8 @@ typedef struct Snake {
     snake_node_t *tail;
     /* The direction the snake head is going to move on the next iteration */
     direction_t heading;
+    /* Snake growth counter indicating how many segments the snake should add */
+    int growth;
 } snake_t;
 
 /*! Defines a board, which is a just a grid of cells. */
@@ -59,6 +61,8 @@ typedef struct Game {
     float time_step;
     /* Probability of one food cell appeared in each game iteration */
     float food_probability;
+    /* Segments that snakes grow for each food cell that they eat */
+    int growth_per_food;
 } game_t;
 
 /* create a board with `rows` * `cols` */
@@ -78,5 +82,14 @@ void destroy_snake(snake_t *snake);
 
 /* add food to board with probalility */
 void randomly_add_food(board_t *board, float probability);
+
+/* set direction */
+void set_direction(snake_t *snake);
+
+void update_snake_head(snake_t *snake, board_t *board, int growth_per_food);
+void update_snake_tail(snake_t *snake, board_t *board);
+
+/* run step */
+int next_frame(game_t *cur_game);
 
 #endif // GAME_H
