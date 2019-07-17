@@ -17,7 +17,8 @@ int main(int argc, char *argv[]) {
     while (1) {
         display(game);
         direction_t d = get_action(game);
-        set_direction(game->snake, d);
+        set_direction(game->snake1, get_action1(game));
+        set_direction(game->snake2, get_action2(game));
         if (next_frame(game) != 0) {
             break;
         }
