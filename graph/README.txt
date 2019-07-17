@@ -18,5 +18,7 @@ interpreted as follows:
 
 'X': A wall cell
 '-': An open cell
-'N','S','E','W': A single segment computer controlled snake with the same respective initial
+'N','S','E','W': A single segment snake1 with the same respective initial
+                 heading.
+'n','s','e','w': A single segment snake2 with the same respective initial
                  heading.

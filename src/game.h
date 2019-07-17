@@ -55,8 +55,10 @@ typedef struct Board {
 typedef struct Game {
     /* The game board */
     board_t *board;
-    /* The human controlled snake */
-    snake_t *snake;
+    /* The snake 1 */
+    snake_t *snake1;
+    /* The snake 2 */
+    snake_t *snake2;
     /* Time delay between each game iteration, in seconds */
     float time_step;
     /* Probability of one food cell appeared in each game iteration */
