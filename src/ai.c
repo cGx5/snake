@@ -5,8 +5,8 @@
 
 const static int dx[] = {0, 1, 0, -1};
 const static int dy[] = {1, 0, -1, 0};
-const int N = 100;
-const int M = 100000;
+#define N 100
+#define M 100000
 
 void bfs(int sx, int sy, game_t* game, int dis[][N]) {
   static int qx[M], qy[M];
