@@ -82,6 +82,3 @@ direction_t get_action1(game_t *game) {
   //  return rand_action(game, game->snake1);
 }
 
-direction_t get_action2(game_t *game) {
-  return simple(game, game->snake2, game->snake1);
-}
